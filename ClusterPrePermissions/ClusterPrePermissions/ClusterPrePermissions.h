@@ -75,6 +75,12 @@ typedef void (^ClusterPrePermissionCompletionHandler)(BOOL hasPermission,
 
 + (instancetype) sharedPermissions;
 
+- (void) showCameraPermissionsWithTitle:(NSString *)requestTitle
+                                message:(NSString *)message
+                        denyButtonTitle:(NSString *)denyButtonTitle
+                       grantButtonTitle:(NSString *)grantButtonTitle
+                      completionHandler:(ClusterPrePermissionCompletionHandler)completionHandler;
+
 - (void) showPhotoPermissionsWithTitle:(NSString *)requestTitle
                                message:(NSString *)message
                        denyButtonTitle:(NSString *)denyButtonTitle
